@@ -23,7 +23,8 @@ The browser check operates real UI forms rather than injecting the finished stat
 9. Return AD-12 as Leela: Film Society completes; MI-09 remains open.
 10. Check no horizontal overflow at widths 375 and 768 px.
 11. Restart: original phase, single microphone loan, and no saved notes.
-12. No JavaScript page errors were recorded.
+12. Open a custody editor, then start and confirm a return without saving the custody form. Verify the return persists and survives reload. This regression reproduced the review finding before the fix and passes after making the editors mutually exclusive.
+13. No JavaScript page errors were recorded.
 
 Results: [browser-results.json](evidence/browser-results.json). Screenshots: `after-*.png` in [evidence](evidence/).
 

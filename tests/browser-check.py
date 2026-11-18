@@ -67,6 +67,13 @@ with sync_playwright() as p:
   shot(f'after-05-mobile-{width}.png');mobile.append(width)
  page.get_by_role('button',name='Restart sample shift').click()
  assert len(state()['loans'])==1 and state()['phase']==0 and not state()['notes']
+ # Regression: starting a return must close an unsaved custody editor.
+ tab('Loan register')
+ page.locator('[data-action="custody"][data-val="401"]').click()
+ receive(401,'MI-09','Tara Shah')
+ assert state()['loans'][0]['back'], 'Return was not persisted after opening custody editor'
+ page.reload();assert state()['loans'][0]['back']
+ page.get_by_role('button',name='Restart sample shift').click()
  assert not errors,errors
  report={'transport':'file://, offline bundled assets','scenario':'Film Society pickup → partial return → Leela custody agreement → saved handover → morning wrong-unit rejection → correct return','reloadPersistence':True,'draftPreservation':True,'returnFocus':True,'wrongUnitBlocked':True,'unrelatedMicrophoneRemainsOpen':True,'restartVerified':True,'mobileNoHorizontalOverflow':mobile,'pageErrors':errors}
  (out/'browser-results.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

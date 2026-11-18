@@ -498,6 +498,7 @@
       case "return": {
         const l = s.loans.find((l) => l.num === Number(v));
         if (!l || l.back) return;
+        s.custodyEditing = null;
         s.returning = l.num;
         s.notice = 'Read the physical unit ID before confirming the return.';
         break;
