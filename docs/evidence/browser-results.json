@@ -1,0 +1,15 @@
+{
+  "transport": "file://, offline bundled assets",
+  "scenario": "Film Society pickup \u2192 partial return \u2192 Leela custody agreement \u2192 saved handover \u2192 morning wrong-unit rejection \u2192 correct return",
+  "reloadPersistence": true,
+  "draftPreservation": true,
+  "returnFocus": true,
+  "wrongUnitBlocked": true,
+  "unrelatedMicrophoneRemainsOpen": true,
+  "restartVerified": true,
+  "mobileNoHorizontalOverflow": [
+    375,
+    768
+  ],
+  "pageErrors": []
+}

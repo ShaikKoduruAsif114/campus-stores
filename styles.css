@@ -363,6 +363,35 @@ body > main {
     gap: 5px;
   }
 }
+#campus-stores .kit-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+}
+#campus-stores .kit-line {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+#campus-stores .kit-line > .tag { margin: 7px 0; }
+#campus-stores .kit-line .row { margin-top: 5px; }
+#campus-stores .custody-entry { padding: 8px 0 0; }
+#campus-stores .handover {
+  padding: 0 18px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--desk);
+}
+#campus-stores .row > div { min-width: 0; overflow-wrap: anywhere; }
+#campus-stores .row .buttons { justify-content: flex-end; max-width: 210px; }
+@container (max-width:650px) {
+  #campus-stores .kit-line .row,
+  #campus-stores .handover .row { grid-template-columns: minmax(0, 1fr); }
+  #campus-stores .row .buttons { justify-content: flex-start; max-width: none; }
+  #campus-stores .handover { padding-inline: 12px; }
+}
 @media (pointer: coarse) {
   #campus-stores button,
   #campus-stores select {

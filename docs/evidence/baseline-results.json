@@ -1,0 +1,20 @@
+{
+  "scenario": "Original app, real browser form interactions over file://",
+  "guardrail": "CA-03 blocked for RQ-214",
+  "issued": [
+    "PR-04",
+    "SP-02",
+    "AD-12"
+  ],
+  "evening": "PR-04 and SP-02 returned; remaining AD-12 slip still names Kabir, not Leela",
+  "morning": "Return closes immediately with no unit ID or returner confirmation; MI-09 remains outstanding",
+  "pageErrors": [],
+  "screenshots": [
+    "before-01-request.png",
+    "before-02-authorization.png",
+    "before-03-guardrail.png",
+    "before-04-partial-return.png",
+    "before-05-handover.png",
+    "before-06-morning.png"
+  ]
+}
